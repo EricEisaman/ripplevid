@@ -5,6 +5,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
+    <link href="https://cdn.glitch.com/dda2e650-2bad-4ea4-8777-9b70c2ad5e3e%2Fripple.png?v=1592074088681" rel="icon">
 		<style>
 			*{
 				box-sizing: border-box;
@@ -489,6 +490,7 @@ function init() {
 	waterQuad.scale.set( w, h, 1 );
 
 	video = document.createElement( 'video' );
+  video.setAttribute('crossorigin','');
 
 	var ogg = "" !== video.canPlayType( 'video/ogg; codecs="theora"' );
 	var webm = "" !== video.canPlayType( 'video/webm; codecs="vp8, vorbis"' );
@@ -496,7 +498,7 @@ function init() {
 	// if( ogg ) video.src = 'video.ogg';
 	// else if( webm ) video.src = 'video.webm';
 	// else video.src = 'video.mp4';
-	video.src = 'gc.mp4';
+	video.src = 'https://cdn.glitch.com/dda2e650-2bad-4ea4-8777-9b70c2ad5e3e%2Fgc.mp4?v=1592073490589';
 
 	video.volume = 0;
 	video.loop = true;
